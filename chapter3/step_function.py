@@ -3,6 +3,7 @@ import matplotlib.pylab as plt
 
 
 def step_function(x: np.ndarray) -> np.ndarray:
+    """引数に ndarrayを取り、要素が 0 or 1 の整数の ndarrayを返す"""
     return np.array(x > 0, dtype=np.int64)
 
 
