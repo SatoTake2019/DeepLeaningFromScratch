@@ -24,4 +24,14 @@ print(img.shape)  # (784,)
 img = img.reshape(28, 28)  # 形状を元の画像サイズに変形
 print(img.shape)  # (28, 28)
 
-img_show(img)
+# pixchar = ".-~=:;^O08%&$W@#"
+# pixchar = "米髟面鼎蠻鬣麌黌鬱䨻"
+pixchar = "░▒▓█"
+
+for i, pix in enumerate(x_train[0]):
+    if pix != 0:
+        print(f'{pixchar[pix // int(256 / len(pixchar))]}', end='')
+    else:
+        print('  ', end='')
+    if i % 28 == 0:
+        print()
